@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useCounter from '../../hooks/useCounter'
 import useFetch from '../../hooks/useFetch'
 
 const MultipleCustomHook = () => {
   const counter = useCounter(1)
 
-  if (counter.state === 31) {
-    counter.reset()
-  }
-
   const { loading, data } = useFetch(
     `https://www.breakingbadapi.com/api/quotes/${counter.state}`
   )
 
-  const { quote, author } = !!data && data[0]
+  useEffect(() => {
+    if (!loading && Array.isArray(data) && data.length === 0) {
+      counter.reset()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading])
+
+  const quote = !!data && data[0]?.quote
+  const author = !!data && data[0]?.author
 
   return (
     <div className="container mt-5">
