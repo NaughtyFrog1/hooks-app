@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const initialState = {
@@ -8,7 +8,14 @@ const initialState = {
 }
 
 const useFetch = (url) => {
+  const isMounted = useRef(true)
   const [state, setState] = useState(initialState)
+
+  useEffect(() => {
+    return () => {
+      isMounted.current = false
+    }
+  }, [])
 
   useEffect(() => {
     setState(initialState)
@@ -16,11 +23,13 @@ const useFetch = (url) => {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        setState({
-          data,
-          loading: false,
-          error: null,
-        })
+        if (isMounted.current) {
+          setState({
+            data,
+            loading: false,
+            error: null,
+          })
+        }
       })
   }, [url])
 

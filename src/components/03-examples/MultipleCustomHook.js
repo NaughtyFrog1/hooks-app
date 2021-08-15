@@ -17,7 +17,7 @@ const MultipleCustomHook = () => {
       <hr />
 
       {loading ? (
-        <p className="alert alert-info text-center animate__animated animate__fadeOut">
+        <p className="alert alert-info text-center">
           Loading...
         </p>
       ) : (
