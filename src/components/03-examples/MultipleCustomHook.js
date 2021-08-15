@@ -5,6 +5,10 @@ import useFetch from '../../hooks/useFetch'
 const MultipleCustomHook = () => {
   const counter = useCounter(1)
 
+  if (counter.state === 31) {
+    counter.reset()
+  }
+
   const { loading, data } = useFetch(
     `https://www.breakingbadapi.com/api/quotes/${counter.state}`
   )
@@ -17,9 +21,7 @@ const MultipleCustomHook = () => {
       <hr />
 
       {loading ? (
-        <p className="alert alert-info text-center">
-          Loading...
-        </p>
+        <p className="alert alert-info text-center">Loading...</p>
       ) : (
         <blockquote className="blockquote text-end animate__animated animate__fadeInUp">
           <p>{quote}</p>
@@ -36,6 +38,8 @@ const MultipleCustomHook = () => {
           +
         </button>
       </div>
+
+      <pre className="mt-5">{`${JSON.stringify(data)} ${loading}`}</pre>
     </div>
   )
 }
