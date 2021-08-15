@@ -17,10 +17,12 @@ const MultipleCustomHook = () => {
       <hr />
 
       {loading ? (
-        <p className="alert alert-info text-center">Loading...</p>
+        <p className="alert alert-info text-center animate__animated animate__fadeOut">
+          Loading...
+        </p>
       ) : (
-        <blockquote className="blockquote text-end">
-          <p className="">{quote}</p>
+        <blockquote className="blockquote text-end animate__animated animate__fadeInUp">
+          <p>{quote}</p>
           <p className="blockquote-footer">{author}</p>
         </blockquote>
       )}
