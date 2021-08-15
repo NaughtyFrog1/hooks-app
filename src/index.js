@@ -12,6 +12,8 @@ import 'animate.css'
 // import MultipleCustomHook from './components/03-examples/MultipleCustomHook'
 // import FocusScreen from './components/04-useRef/FocusScreen'
 // import RealExampleRef from './components/04-useRef/RealExampleRef'
-import LayoutEffect from './components/05-useLayoutEffect/LayoutEffect'
+// import LayoutEffect from './components/05-useLayoutEffect/LayoutEffect'
+// import Memorize from './components/06-memo/Memorize'
+import MemoHook from './components/06-memo/MemoHook'
 
-ReactDOM.render(<LayoutEffect />, document.querySelector('#root'))
+ReactDOM.render(<MemoHook />, document.querySelector('#root'))
