@@ -15,6 +15,7 @@ import 'animate.css'
 // import LayoutEffect from './components/05-useLayoutEffect/LayoutEffect'
 // import Memorize from './components/06-memo/Memorize'
 // import MemoHook from './components/06-memo/MemoHook'
-import CallbackHook from './components/06-memo/CallbackHook'
+// import CallbackHook from './components/06-memo/CallbackHook'
+import Padre from './components/07-tarea-memo/Padre'
 
-ReactDOM.render(<CallbackHook />, document.querySelector('#root'))
+ReactDOM.render(<Padre />, document.querySelector('#root'))
