@@ -5,18 +5,19 @@
 }
 
 .todo-list__item {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .todo-list__remove {
+  .todo-list__btn {
     visibility: hidden;
     opacity: 0;
     transition: 0s visibility, 0.15s ease-out opacity;
   }
 
   &:hover {
-    .todo-list__remove {
+    .todo-list__btn {
       visibility: visible;
       opacity: 100;
     }
