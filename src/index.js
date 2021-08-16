@@ -18,6 +18,6 @@ import 'animate.css'
 // import CallbackHook from './components/06-memo/CallbackHook'
 // import Padre from './components/07-tarea-memo/Padre'
 // import './components/08-useReducer/intro-reducer'
-import TodoApp from './components/09-useReducer/TodoApp'
+import TodoApp from './components/09-TodoApp/TodoApp'
 
 ReactDOM.render(<TodoApp />, document.querySelector('#root'))
