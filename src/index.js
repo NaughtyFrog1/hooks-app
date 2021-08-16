@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -19,3 +20,6 @@ import 'animate.css'
 import Padre from './components/07-tarea-memo/Padre'
 
 ReactDOM.render(<Padre />, document.querySelector('#root'))
+*/
+
+import './components/08-useReducer/intro-reducer'
