@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import TodoListItem from './TodoListItem'
 
 const TodoList = ({ todos, dispatch }) => {
+  if (todos.length === 0) {
+    return <p className="text-secondary text-center">Add new todos</p>
+  }
+
   return (
     <ul className="list-group todo-list">
       {todos.map((todo) => (
