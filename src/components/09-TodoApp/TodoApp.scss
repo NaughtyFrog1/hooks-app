@@ -9,14 +9,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
 
   .todo-list__btn {
     visibility: hidden;
     opacity: 0;
-    transition: 0s visibility, 0.15s ease-out opacity;
+    transition: 0s visibility, 0.2s ease-out opacity;
   }
 
   &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+
     .todo-list__btn {
       visibility: visible;
       opacity: 100;
@@ -26,7 +34,7 @@
 
 .todo-add {
   input {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25)
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   }
 
   input:focus {
