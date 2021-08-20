@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import 'bootstrap/scss/bootstrap.scss'
+import 'bootstrap/js/dist/collapse'
 import 'animate.css'
 
 // import App from './App'
