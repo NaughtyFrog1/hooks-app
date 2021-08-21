@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import 'bootstrap/scss/bootstrap.scss'
+import 'bootstrap/js/dist/collapse'
 import 'animate.css'
 
 // import App from './App'
@@ -18,6 +19,7 @@ import 'animate.css'
 // import CallbackHook from './components/06-memo/CallbackHook'
 // import Padre from './components/07-tarea-memo/Padre'
 // import './components/08-useReducer/intro-reducer'
-import TodoApp from './components/09-TodoApp/TodoApp'
+// import TodoApp from './components/09-TodoApp/TodoApp'
+import App from './components/10-useContext/App'
 
-ReactDOM.render(<TodoApp />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))
